@@ -160,13 +160,8 @@ function validateStep(step) {
 
   if (step === 3) {
     const track = document.getElementById('reg-track')?.value;
-    const projectTitle = document.getElementById('reg-project-title')?.value.trim();
     if (!track) {
       showToast('⚠️ Please select a Hackathon Track.');
-      return false;
-    }
-    if (!projectTitle) {
-      showToast('⚠️ Please provide a Working Project Title.');
       return false;
     }
     return true;
