@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZyNav — Codebase Intelligence & Navigation (HB-26)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>ZyNav <span class="badge">Track 3</span></h1>
+          <p class="subtitle">Codebase Intelligence & Navigation System</p>
+        </div>
+      </div>
+      <div class="header-nav">
+        <button class="nav-tab active" id="tab-chat" onclick="switchTab('chat')">
+          <span class="dot"></span> 💬 Codebase Q&A
+        </button>
+        <button class="nav-tab" id="tab-diff" onclick="switchTab('diff')">
+          <span class="dot yellow"></span> ⚡ What Breaks? (Differentiator)
+        </button>
+      </div>
+      <div class="header-status">
+        <span class="status-indicator" id="backend-status">
+          <span class="pulse"></span> Backend: <strong id="status-text">Checking...</strong>
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- TAB 1: Chat Q&A -->
+      <section id="view-chat" class="tab-view active">
+        <div class="chat-wrapper">
+          <!-- Suggestion Chips -->
+          <div class="suggestion-bar">
+            <span class="suggestion-label">Suggested Questions:</span>
+            <button class="chip" onclick="askPredefined('Where is authentication and token validation handled?')">🔑 Where is auth handled?</button>
+            <button class="chip" onclick="askPredefined('How does user registration and password hashing work?')">👤 User registration</button>
+            <button class="chip" onclick="askPredefined('How is the database connection managed in SQLite?')">🗄️ Database connection</button>
+            <button class="chip" onclick="askPredefined('How is Stripe payment processed?')">💳 Stripe payments</button>
+          </div>
+
+          <!-- Messages Container -->
+          <div class="messages-container" id="chat-messages">
+            <!-- Welcome Bot Message -->
+            <div class="message-row bot">
+              <div class="avatar bot-avatar">AI</div>
+              <div class="message-bubble">
+                <h3>Welcome to ZyNav Codebase Intelligence!</h3>
+                <p>Ask any question about the codebase in plain English. Answers are strictly grounded in retrieved code chunks with exact file and line citations.</p>
+                <div class="features-grid">
+                  <div class="feat-card">
+                    <strong>1. Overlapping Chunks</strong>
+                    <span>Fixed windows with line metadata</span>
+                  </div>
+                  <div class="feat-card">
+                    <strong>2. Cosine Retrieval</strong>
+                    <span>Top-5 semantic ranking via Numpy</span>
+                  </div>
+                  <div class="feat-card">
+                    <strong>3. Cited LLM Answers</strong>
+                    <span>Strict grounding & line citations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Bar -->
+          <form class="chat-input-form" id="chat-form" onsubmit="handleSendQuestion(event)">
+            <div class="input-container">
+              <input 
+                type="text" 
+                id="question-input" 
+                placeholder="Ask anything (e.g. 'Where is auth handled?', 'What does get_db return?')..."
+                autocomplete="off"
+                required
+              />
+              <button type="submit" id="send-btn" class="send-button">
+                <span>Send</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TAB 2: Differentiator ("What would break?") -->
+      <section id="view-diff" class="tab-view">
+        <div class="differentiator-wrapper">
+          <div class="diff-hero">
+            <h2>⚡ Impact Analyzer & Differentiator</h2>
+            <p>Answers: <strong>"What would break if I change this function/symbol?"</strong> by scanning definitions, imports, call-sites, and computing the blast radius.</p>
+          </div>
+
+          <div class="diff-input-card">
+            <div class="input-group">
+              <input 
+                type="text" 
+                id="diff-symbol-input" 
+                placeholder="Enter function or symbol name (e.g. verify_token, get_db, register_user)..." 
+                value="verify_token"
+              />
+              <button class="primary-btn" onclick="analyzeImpact()">🔍 Analyze Blast Radius</button>
+            </div>
+            <div class="sample-symbols">
+              <span>Try symbol:</span>
+              <a href="javascript:void(0)" onclick="setDiffSymbol('verify_token')">verify_token</a>
+              <a href="javascript:void(0)" onclick="setDiffSymbol('get_db')">get_db</a>
+              <a href="javascript:void(0)" onclick="setDiffSymbol('register_user')">register_user</a>
+              <a href="javascript:void(0)" onclick="setDiffSymbol('create_access_token')">create_access_token</a>
+              <a href="javascript:void(0)" onclick="setDiffSymbol('process_payment')">process_payment</a>
+            </div>
+          </div>
+
+          <!-- Impact Results Card -->
+          <div id="diff-results" class="diff-results">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Citation Modal Drawer -->
+    <div id="citation-modal" class="modal-backdrop" onclick="closeModal(event)">
+      <div class="modal-card" onclick="event.stopPropagation()">
+        <div class="modal-header">
+          <div class="modal-title">
+            <span class="file-icon">📄</span>
+            <span id="modal-filepath">src/auth/jwt.py</span>
+            <span class="line-badge" id="modal-lines">Lines 1-28</span>
+          </div>
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <pre><code id="modal-code">Loading code snippet...</code></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

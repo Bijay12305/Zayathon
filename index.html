@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyan">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>ZAYATHON 2026 | Premier National Hackathon by ZAYA CODE HUB</title>
+  <meta name="title" content="ZAYATHON 2026 | Premier National Hackathon by ZAYA CODE HUB" />
+  <meta name="description" content="ZAYATHON is India's premier 48-hour student hackathon organized by ZAYA CODE HUB at Sona College of Technology, Salem. 10 cutting-edge tracks, ₹50,000+ prize pool, industry mentorship, and direct internship opportunities." />
+  <meta name="keywords" content="ZAYATHON, ZAYA CODE HUB, Hackathon 2026, Student Hackathon, Sona College of Technology, AI Hackathon, Web3, FinTech, Coding Competition, Salem Tamil Nadu" />
+  <meta name="author" content="ZAYA CODE HUB" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ZAYATHON 2026 | Organized by ZAYA CODE HUB" />
+  <meta property="og:description" content="Innovate, Build, and Transcend at ZAYATHON. 48-Hour National Hackathon featuring 10 Tracks, ₹50K+ Prizes, and Direct Internships." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23080B10'/><polygon points='25,25 75,25 35,75 75,75' fill='none' stroke='%2300F0FF' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="nav-brand" aria-label="ZAYATHON 2026 Homepage">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ZAYA<span>THON</span></span>
+          <span class="brand-sub">BY ZAYA CODE HUB</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#tracks" class="nav-link">Tracks</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#prizes" class="nav-link">Prizes</a></li>
+          <li><a href="#why-join" class="nav-link">Why Join</a></li>
+          <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Switcher, Mode Toggle & Register CTA) -->
+      <div class="nav-actions">
+        <!-- Day / Dark Mode Toggle Button -->
+        <button type="button" class="mode-toggle-btn" id="mode-toggle-btn" aria-label="Toggle Day / Dark Mode" title="Toggle Day / Dark Mode">
+          <!-- Moon Icon (Visible in Dark Mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Visible in Light/Day Mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Theme Accent Switcher -->
+        <div class="theme-picker" title="Switch Theme Glow Accent">
+          <div class="theme-dot cyan active" data-theme-name="cyan" title="Cyber Cyan"></div>
+          <div class="theme-dot violet" data-theme-name="violet" title="Neon Violet"></div>
+          <div class="theme-dot emerald" data-theme-name="emerald" title="Matrix Emerald"></div>
+        </div>
+
+        <!-- Student Login Button -->
+        <button type="button" class="btn btn-secondary btn-sm open-student-login-btn" onclick="openStudentLoginModal()" title="Participant Login">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login</span>
+        </button>
+
+        <button type="button" class="btn btn-primary btn-sm open-registration-btn" onclick="openRegistrationModal()">
+          <span>Register Now</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle Mobile Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation Drawer">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 0.5rem;">
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em;">THEME / MODE</span>
+      <button type="button" class="mode-toggle-btn mobile-mode-btn" aria-label="Toggle Day / Dark Mode" title="Toggle Day / Dark Mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link"><span>Home</span> ▸</a></li>
+      <li><a href="#about" class="mobile-nav-link"><span>About ZAYATHON</span> ▸</a></li>
+      <li><a href="#tracks" class="mobile-nav-link"><span>10 Tracks</span> ▸</a></li>
+      <li><a href="#timeline" class="mobile-nav-link"><span>Timeline & Schedule</span> ▸</a></li>
+      <li><a href="#prizes" class="mobile-nav-link"><span>Prizes & Rewards</span> ▸</a></li>
+      <li><a href="#why-join" class="mobile-nav-link"><span>Why Participate</span> ▸</a></li>
+      <li><a href="#sponsors" class="mobile-nav-link"><span>Sponsors & Organizers</span> ▸</a></li>
+      <li><a href="#faq" class="mobile-nav-link"><span>FAQ</span> ▸</a></li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+      <button type="button" class="btn btn-primary open-registration-btn" onclick="openRegistrationModal()" style="width: 100%;">
+        <span>Register Team Now</span>
+      </button>
+      <button type="button" class="btn btn-secondary open-student-login-btn" onclick="openStudentLoginModal()" style="width: 100%;">
+        <span>Student Login / Pass</span>
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION & PARTICLE CANVAS
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Interactive Cyber Canvas -->
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-pulse"></span>
+          <span class="badge-text">⚡ National Flagship Hackathon • Sona College of Technology, Salem</span>
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          INNOVATE. BUILD.<br />
+          <span class="highlight">ZAYATHON 2026</span>
+        </h1>
+
+        <p class="hero-tagline reveal reveal-delay-2">
+          Where India's Brightest Minds Engineer Next-Generation Solutions
+        </p>
+
+        <p class="hero-desc reveal reveal-delay-2">
+          Organized by <strong>ZAYA CODE HUB</strong>. An exhilarating 48-hour hybrid hackathon uniting passionate student innovators (1st to 3rd year) to build breakthrough software, IoT, and AI systems with elite mentorship, lucrative prizes, and career-defining internships.
+        </p>
+
+        <!-- Official Meta Strip -->
+        <div class="hero-meta-strip reveal reveal-delay-3">
+          <div class="meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Flagship 48-Hour Sprint</span>
+          </div>
+          <div class="meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Sona College of Tech, Salem & Online Hybrid</span>
+          </div>
+          <div class="meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Teams of 2–4 Members</span>
+          </div>
+        </div>
+
+        <!-- Dual CTA Buttons -->
+        <div class="hero-actions reveal reveal-delay-3">
+          <button type="button" class="btn btn-primary btn-lg open-registration-btn" onclick="openRegistrationModal()">
+            <span>🚀 Register Your Team</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <a href="#tracks" class="btn btn-secondary btn-lg">
+            <span>⚡ Explore 10 Tracks</span>
+          </a>
+        </div>
+
+        <!-- Real-Time Metrics Bar -->
+        <div class="hero-metrics reveal reveal-delay-4">
+          <div class="metric-card">
+            <div class="metric-value">₹50,000+</div>
+            <div class="metric-label">Prize Pool & Perks</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">10 Tracks</div>
+            <div class="metric-label">Innovation Domains</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">48 Hours</div>
+            <div class="metric-label">Continuous Coding</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">Direct Offers</div>
+            <div class="metric-label">ZAYA CODE HUB Internships</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. LIVE COUNTDOWN SECTION
+         ====================================================================== -->
+    <section class="countdown-section" aria-label="Hackathon Countdown">
+      <div class="container">
+        <div class="countdown-wrapper reveal">
+          <div class="countdown-header">
+            <div class="countdown-title-group">
+              <div class="countdown-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h2 class="countdown-heading">THE CLOCK IS TICKING</h2>
+            </div>
+
+            <div class="countdown-status-pill" id="cd-status-pill">
+              <span class="badge-pulse"></span>
+              <span>REGISTRATION PORTAL ACTIVE</span>
+            </div>
+          </div>
+
+          <div class="countdown-grid">
+            <div class="countdown-box">
+              <div class="countdown-number" id="cd-days">00</div>
+              <div class="countdown-unit">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="cd-hours">00</div>
+              <div class="countdown-unit">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="cd-minutes">00</div>
+              <div class="countdown-unit">Minutes</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="cd-seconds">00</div>
+              <div class="countdown-unit">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ABOUT ZAYATHON SECTION
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>About The Hackathon</span>
+          </div>
+          <h2 class="section-title">Catalyzing India's Next Generation of Innovators</h2>
+          <p class="section-desc">
+            ZAYATHON is the signature innovation initiative by <strong>ZAYA CODE HUB</strong>, architected to transform classroom theory into high-impact, enterprise-grade technology prototypes.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story reveal">
+            <h3>Where Ambition Meets Execution</h3>
+            <p>
+              Hosted in collaboration with <strong>Sona College of Technology, Salem</strong>, ZAYATHON serves as a dynamic breeding ground for undergraduate engineering and computer science students (1st to 3rd year).
+            </p>
+            <p>
+              Over an intensive 48-hour sprint, participants ideate, build, stress-test, and pitch production-ready solutions tackling urgent challenges across artificial intelligence, decentralized systems, smart hardware, healthcare, and sustainable agriculture.
+            </p>
+            <div class="about-quote-card">
+              <p>"We don't just judge code; we discover and nurture engineering visionaries who will build tomorrow's technology landscape."</p>
+              <span class="about-quote-author">— ZAYA CODE HUB Leadership</span>
+            </div>
+          </div>
+
+          <!-- 4 Supporting Highlight Cards -->
+          <div class="about-cards-grid">
+            <div class="glass-card feature-card reveal reveal-delay-1">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h4 class="feature-title">Real-World Engineering</h4>
+              <p class="feature-desc">Build practical applications, working MVPs, and resilient systems that solve verified industry bottlenecks.</p>
+            </div>
+
+            <div class="glass-card feature-card reveal reveal-delay-2">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+              </div>
+              <h4 class="feature-title">Elite Mentorship</h4>
+              <p class="feature-desc">Direct round-the-clock guidance from seasoned software architects, founders, and industry engineering leads.</p>
+            </div>
+
+            <div class="glass-card feature-card reveal reveal-delay-3">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h4 class="feature-title">Career Fast-Track</h4>
+              <p class="feature-desc">Winners and top performers earn direct internship placements, stipend opportunities, and full-time hiring pipelines.</p>
+            </div>
+
+            <div class="glass-card feature-card reveal reveal-delay-4">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              </div>
+              <h4 class="feature-title">High-Energy Arena</h4>
+              <p class="feature-desc">High-speed gigabit infrastructure, dedicated hardware labs, midnight pizza jams, and official ZAYATHON swag kits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. HACKATHON TRACKS / THEMES SECTION
+         ====================================================================== -->
+    <section class="section" id="tracks">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>10 Official Themes</span>
+          </div>
+          <h2 class="section-title">Explore Hackathon Tracks</h2>
+          <p class="section-desc">
+            Choose from 10 high-impact technological domains. Click on any track card to inspect sample problem statements, suggested toolkits, and jury scoring guidelines.
+          </p>
+        </div>
+
+        <!-- Track Filter Pills -->
+        <div class="track-filter-bar reveal">
+          <button type="button" class="track-filter-btn active" data-filter="all">All 10 Tracks</button>
+          <button type="button" class="track-filter-btn" data-filter="ai-web3">AI & Web3</button>
+          <button type="button" class="track-filter-btn" data-filter="core-iot">Core Tech, IoT & Robotics</button>
+          <button type="button" class="track-filter-btn" data-filter="impact-open">Social Impact & Open</button>
+        </div>
+
+        <!-- Tracks Dynamic Grid -->
+        <div class="tracks-grid" id="tracks-grid">
+          <!-- Populated dynamically via js/tracks.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. REGISTRATION CALL-TO-ACTION BANNER
+         ====================================================================== -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card reveal">
+          <h2 class="cta-headline">Your Idea Could Be the Next Big Thing.</h2>
+          <p class="cta-subtitle">
+            Don't let your breakthrough concept remain a sketchbook draft. Assemble your dream team of 2 to 4 innovators and build it live at ZAYATHON 2026.
+          </p>
+
+          <div class="cta-rules-pills">
+            <div class="rule-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <span>Team Size: 2–4 Members</span>
+            </div>
+            <div class="rule-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>Eligibility: 1st, 2nd & 3rd Year Students</span>
+            </div>
+            <div class="rule-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              <span>Duration: 48-Hour Sprint</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-lg open-registration-btn">
+            <span>Register for ZAYATHON →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. HACKATHON TIMELINE & SCHEDULE SECTION
+         ====================================================================== -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Event Roadmap</span>
+          </div>
+          <h2 class="section-title">Milestones & 48-Hour Schedule</h2>
+          <p class="section-desc">
+            Follow the full lifecycle from team registration to the grand valedictory and internship reveals.
+          </p>
+        </div>
+
+        <!-- Schedule Mode Tab Buttons -->
+        <div class="timeline-tabs reveal">
+          <button type="button" class="timeline-tab-btn active" data-tab="roadmap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>Milestone Roadmap</span>
+          </button>
+          <button type="button" class="timeline-tab-btn" data-tab="day1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Day 1 Sprint (24h)</span>
+          </button>
+          <button type="button" class="timeline-tab-btn" data-tab="day2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/></svg>
+            <span>Day 2 Finale & Awards</span>
+          </button>
+        </div>
+
+        <!-- View 1: 6-Phase Milestone Roadmap -->
+        <div class="timeline-horizontal reveal" id="view-roadmap">
+          <div class="timeline-node">
+            <div class="timeline-node-marker">01</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Registration</h4>
+              <p class="timeline-phase-desc">Team formation (2–4 members) and portal registration across official tracks.</p>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-node-marker">02</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Submission</h4>
+              <p class="timeline-phase-desc">Upload project PPT abstract, architecture diagram, and problem statement choice.</p>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-node-marker">03</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Shortlisting</h4>
+              <p class="timeline-phase-desc">Jury reviews abstracts and announces finalist teams with mentor onboardings.</p>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-node-marker">04</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Hackathon Sprint</h4>
+              <p class="timeline-phase-desc">48-hour continuous coding marathon with midnight snacks, workshops & checks.</p>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-node-marker">05</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Evaluation</h4>
+              <p class="timeline-phase-desc">Live prototype demos, technical code reviews, and Q&A with industry judges.</p>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-node-marker">06</div>
+            <div class="timeline-node-content">
+              <h4 class="timeline-phase-title">Results & Gala</h4>
+              <p class="timeline-phase-desc">Grand valedictory ceremony, trophy distribution, and internship reveals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 2: Day 1 Schedule -->
+        <div class="schedule-container" id="view-day1">
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <div class="schedule-time">08:30 AM</div>
+              <div>
+                <h4 class="schedule-event-title">Check-in, Badging & Team Kit Distribution</h4>
+                <p class="schedule-event-desc">On-site registration verification, high-speed Wi-Fi setup, and welcome swag packs.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">10:00 AM</div>
+              <div>
+                <h4 class="schedule-event-title">Grand Opening Ceremony & Keynote Address</h4>
+                <p class="schedule-event-desc">Welcome by ZAYA CODE HUB & Sona College dignitaries, track rules, and judging rubrics.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">11:00 AM</div>
+              <div>
+                <h4 class="schedule-event-title">⚡ HACKATHON CLOCK STARTS: 48-Hour Sprint Begins</h4>
+                <p class="schedule-event-desc">Repository initializations, architecture baseline, and initial prototype sprint.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">03:30 PM</div>
+              <div>
+                <h4 class="schedule-event-title">Mentorship Checkpoint Round 1</h4>
+                <p class="schedule-event-desc">1-on-1 technical guidance with domain mentors for feasibility and architecture refine.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">08:00 PM</div>
+              <div>
+                <h4 class="schedule-event-title">Dinner & Lightning Tech Talk</h4>
+                <p class="schedule-event-desc">Recharge with dinner and an inspiring 20-min session on scaling AI agents.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">12:00 AM</div>
+              <div>
+                <h4 class="schedule-event-title">🌙 Midnight Pizza Jam & Mini Coding Challenge</h4>
+                <p class="schedule-event-desc">Energy drinks, snacks, and spot challenges with instant goodies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 3: Day 2 Schedule -->
+        <div class="schedule-container" id="view-day2">
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <div class="schedule-time">08:00 AM</div>
+              <div>
+                <h4 class="schedule-event-title">Breakfast & Sprint Progress Sync</h4>
+                <p class="schedule-event-desc">Morning coffee and final sprint towards code freeze.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">11:00 AM</div>
+              <div>
+                <h4 class="schedule-event-title">Mentorship Checkpoint Round 2 & Demo Rehearsal</h4>
+                <p class="schedule-event-desc">Dry run pitching with mentors; UI/UX and presentation polishing.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">02:00 PM</div>
+              <div>
+                <h4 class="schedule-event-title">🛑 Hard Code Freeze & GitHub Repository Submissions</h4>
+                <p class="schedule-event-desc">All commits locked; live demo URLs and pitch decks submitted for jury evaluation.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">03:00 PM</div>
+              <div>
+                <h4 class="schedule-event-title">Grand Jury Pitching & Technical Defense</h4>
+                <p class="schedule-event-desc">5-minute live presentations followed by 3-minute jury Q&A and code inspection.</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">06:00 PM</div>
+              <div>
+                <h4 class="schedule-event-title">🏆 Grand Valedictory, Award Ceremony & Internships</h4>
+                <p class="schedule-event-desc">Announcement of Champions, Runner-Ups, Track Winners, and Zaya Code Hub offer letters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. PRIZES & REWARDS SECTION (3D Podium Grid)
+         ====================================================================== -->
+    <section class="section" id="prizes">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Rewards & Recognition</span>
+          </div>
+          <h2 class="section-title">Prizes & Career Launchpad</h2>
+          <p class="section-desc">
+            Compete for a prestigious prize pool including cash rewards, championship trophies, premium swag kits, and direct internship offers at ZAYA CODE HUB.
+          </p>
+        </div>
+
+        <!-- 3D Podium Grid -->
+        <div class="prizes-podium-grid">
+          <!-- 1st Runner Up (2nd Place) - Left -->
+          <div class="glass-card prize-card runner-1 reveal reveal-delay-1">
+            <span class="prize-badge">🥈 1st Runner Up</span>
+            <div class="prize-trophy-icon">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M14 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+            <h3 class="prize-title">Silver Trophy</h3>
+            <div class="prize-amount">₹15,000+</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Runner Up Cash Reward + Perks</p>
+            <ul class="prize-benefits-list">
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct Internship Opportunities at Zaya Code Hub</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Runner Up Silver Trophy & Merit Certificates</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Exclusive Developer Swag Kit & Goodies</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Champion Winner (1st Place) - Center Highlight -->
+          <div class="glass-card prize-card champion reveal">
+            <span class="prize-badge">👑 Overall Champion</span>
+            <div class="prize-trophy-icon">
+              <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M14 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+            <h3 class="prize-title">Grand Winner Trophy</h3>
+            <div class="prize-amount">₹25,000+</div>
+            <p style="font-size: 0.95rem; color: #ffb800; font-weight: 600;">Grand Cash Prize + Direct Hiring Track</p>
+            <ul class="prize-benefits-list">
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Guaranteed Paid Internship Offers</strong> at ZAYA CODE HUB</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Grand Champion Rolling Trophy & Certificates of Excellence</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>VIP Tech Gear, Cloud Credits & Ecosystem Perks</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>National Media Spotlight & Portfolio Feature</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2nd Runner Up (3rd Place) - Right -->
+          <div class="glass-card prize-card runner-2 reveal reveal-delay-2">
+            <span class="prize-badge">🥉 2nd Runner Up</span>
+            <div class="prize-trophy-icon">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M14 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+            <h3 class="prize-title">Bronze Trophy</h3>
+            <div class="prize-amount">₹10,000+</div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">3rd Place Cash Reward + Perks</p>
+            <ul class="prize-benefits-list">
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Internship Shortlisting & Interview Fast-Track</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Bronze Award Trophy & Official Honors Certificate</span>
+              </li>
+              <li class="prize-benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>ZAYATHON Swag Kit & Community Perks</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Special Category Awards & Perks -->
+        <div class="special-prizes-grid reveal">
+          <div class="glass-card special-prize-card">
+            <div class="special-prize-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h4 class="special-prize-name">Most Innovative Architecture</h4>
+            <p class="special-prize-reward">Special Trophy + Goodies Kit</p>
+          </div>
+
+          <div class="glass-card special-prize-card">
+            <div class="special-prize-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 class="special-prize-name">Best All-Women Team</h4>
+            <p class="special-prize-reward">Empowerment Award + Swags</p>
+          </div>
+
+          <div class="glass-card special-prize-card">
+            <div class="special-prize-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <h4 class="special-prize-name">Best Beginner Hack (1st Year)</h4>
+            <p class="special-prize-reward">Rising Star Certificate + Gifts</p>
+          </div>
+
+          <div class="glass-card special-prize-card">
+            <div class="special-prize-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4 class="special-prize-name">All Participants</h4>
+            <p class="special-prize-reward">Official Certificate & Cloud Credits</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. WHY PARTICIPATE SECTION
+         ====================================================================== -->
+    <section class="section" id="why-join">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Participant Benefits</span>
+          </div>
+          <h2 class="section-title">Why Join ZAYATHON?</h2>
+          <p class="section-desc">
+            More than just a hackathon—it is a fast-track springboard for your software engineering career.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="glass-card why-card reveal reveal-delay-1">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="why-card-title">Build Real Solutions</h3>
+            <p class="why-card-desc">Move past toy projects. Build production-ready MVPs that tackle pressing enterprise and socio-economic hurdles.</p>
+          </div>
+
+          <div class="glass-card why-card reveal reveal-delay-2">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="why-card-title">Learn New Technologies</h3>
+            <p class="why-card-desc">Master cutting-edge AI frameworks, Web3 protocols, ROS2, and cloud native architectures in 48 intense hours.</p>
+          </div>
+
+          <div class="glass-card why-card reveal reveal-delay-3">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="why-card-title">Collaborate With Others</h3>
+            <p class="why-card-desc">Network with over 250+ passionate student developers, designers, and innovators across India's top colleges.</p>
+          </div>
+
+          <div class="glass-card why-card reveal reveal-delay-1">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="why-card-title">Showcase Your Skills</h3>
+            <p class="why-card-desc">Pitch directly to distinguished tech executives, venture scouts, and engineering hiring managers.</p>
+          </div>
+
+          <div class="glass-card why-card reveal reveal-delay-2">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <h3 class="why-card-title">Gain National Recognition</h3>
+            <p class="why-card-desc">Earn verified digital credentials, national spotlights, and a prestigious achievement on your resume.</p>
+          </div>
+
+          <div class="glass-card why-card reveal reveal-delay-3">
+            <div class="why-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+            </div>
+            <h3 class="why-card-title">Win Prizes & Internships</h3>
+            <p class="why-card-desc">Walk away with cash bounties, trophies, exclusive swag, and direct internship offers at Zaya Code Hub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. SPONSORS & PARTNERS ECOSYSTEM
+         ====================================================================== -->
+    <section class="section" id="sponsors">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Organizers & Partners</span>
+          </div>
+          <h2 class="section-title">Organized by ZAYA CODE HUB</h2>
+          <p class="section-desc">
+            Powered by leading technology communities, premier academic institutions, and industry partners.
+          </p>
+        </div>
+
+        <div class="sponsors-wrapper">
+          <!-- Organizer Profile & Venue Spotlight -->
+          <div class="organizer-spotlight reveal">
+            <div class="organizer-info">
+              <h3>ZAYA CODE HUB</h3>
+              <p>
+                ZAYA CODE HUB is an innovative Indian technology and education powerhouse delivering cutting-edge software development, developer masterclasses, tutorials, and career-launching internship programs.
+              </p>
+              <div class="organizer-stats">
+                <div class="org-stat-item">
+                  <span class="org-stat-num">50,000+</span>
+                  <span class="org-stat-label">Students Reached</span>
+                </div>
+                <div class="org-stat-item">
+                  <span class="org-stat-num">100+</span>
+                  <span class="org-stat-label">Tech Programs</span>
+                </div>
+                <div class="org-stat-item">
+                  <span class="org-stat-num">100%</span>
+                  <span class="org-stat-label">Hands-On Focus</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="venue-card">
+              <span class="venue-tag">📍 Official Venue & Host Partner</span>
+              <h4 class="venue-name">Sona College of Technology</h4>
+              <p class="venue-address">Salem, Tamil Nadu 636005, India (Hybrid Access Available)</p>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">
+                Providing state-of-the-art auditoriums, networking infrastructure, hardware labs, and hospitality for hackathon participants.
+              </p>
+            </div>
+          </div>
+
+          <!-- Partner Tiers -->
+          <div class="partner-tier-block reveal">
+            <h4 class="partner-tier-title">Technology & Community Ecosystem</h4>
+            <div class="partners-logos-grid">
+              <div class="partner-logo-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                <span>Cloud Scale Partner</span>
+              </div>
+              <div class="partner-logo-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span>DevTools Network</span>
+              </div>
+              <div class="partner-logo-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+                <span>Tech Media Hub</span>
+              </div>
+              <div class="partner-logo-card">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Student Developer Guild</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.75rem;">
+              <button type="button" class="btn btn-secondary sponsor-inquiry-btn">
+                <span>Become a Sponsor / Partner With Us ↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. FAQ ACCORDION & LIVE SEARCH
+         ====================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <span class="tag-dot"></span>
+            <span>Got Questions?</span>
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about team eligibility, registration rules, hardware, judging, and prizes.
+          </p>
+        </div>
+
+        <!-- Live Instant Search Bar -->
+        <div class="faq-search-wrapper reveal">
+          <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Search questions (e.g., team size, eligibility, prizes, registration)..." aria-label="Search FAQ" />
+        </div>
+
+        <!-- FAQ Accordion List -->
+        <div class="faq-accordion-list" id="faq-accordion-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">Who is eligible to participate in ZAYATHON?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                ZAYATHON is open to all passionate undergraduate college and university students (typically 1st, 2nd, and 3rd year). Students from any engineering, technology, computer applications, or science discipline are welcome to form cross-disciplinary teams.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">Can I participate as an individual, or is a team required?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                To foster team collaboration, participants must register in teams of <strong>2 to 4 members</strong>. You can appoint one Team Leader who completes the initial registration and lists the other teammates.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">What are the 10 official hackathon tracks?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                The 10 official tracks are: 1) Artificial Intelligence & Agentic AI, 2) Web3, Blockchain & DeFi, 3) FinTech & Digital Economy, 4) IoT & Smart Cities, 5) Cybersecurity & Threat Intelligence, 6) HealthTech & Bio-Informatics, 7) Robotics & Autonomous Systems, 8) Agritech & Rural Innovation, 9) Transportation & Smart Logistics, and 10) Open Innovation & Moonshots.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">How does the team registration process work?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                Click any "Register Now" button on this website to launch the 3-step interactive registration wizard. Enter your team details, leader & member information, choose your track, and submit. You will receive an instant digital team pass and verification ID.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">Is ZAYATHON conducted online, offline, or hybrid?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                ZAYATHON offers a premier hybrid experience. Shortlisted teams can attend in person at Sona College of Technology, Salem, Tamil Nadu, enjoying food, labs, swags, and round-the-clock venue access, or participate through the secure online submission stream.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">What should teams submit for evaluation?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                Teams must submit: 1) A public GitHub repository with active commit history during the 48 hours, 2) A concise pitch deck (PDF/PPT), and 3) A 2–3 minute video demo or live prototype showing working features. Public open-source libraries are permitted with proper attribution.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span class="faq-question-text">How will projects be evaluated by the jury?</span>
+              <div class="faq-icon-toggle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer-body">
+              <div class="faq-answer-inner">
+                Projects are scored across 5 core dimensions: Innovation & Originality (25%), Technical Complexity & Code Quality (25%), Practical Feasibility & Impact (20%), Completeness of Working Prototype (15%), and Clarity of Final Pitch & Defense (15%).
+              </div>
+            </div>
+          </div>
+
+          <!-- Fallback when no search results match -->
+          <div id="faq-no-results" style="display: none; text-align: center; padding: 2rem; color: var(--text-muted);">
+            No matching questions found. Have a specific inquiry? Email the organizers at <a href="mailto:zayacodehub@gmail.com" style="color:var(--primary);">zayacodehub@gmail.com</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. FINAL CALL-TO-ACTION SECTION
+         ====================================================================== -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-box reveal">
+          <h2 class="final-cta-title">Ready to Build the Future?</h2>
+          <p class="final-cta-desc">
+            Bring your ideas, build something meaningful, and make your mark at ZAYATHON. Your journey from student builder to industry creator starts here.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.25rem;">
+            <button type="button" class="btn btn-primary btn-lg open-registration-btn">
+              <span>REGISTER NOW →</span>
+            </button>
+            <a href="mailto:zayacodehub@gmail.com?subject=ZAYATHON%20Question" class="btn btn-secondary btn-lg">
+              <span>Contact Organizers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       12. FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">ZAYA<span>THON</span></span>
+              <span class="brand-sub">BY ZAYA CODE HUB</span>
+            </div>
+          </a>
+          <p>
+            India's premier 48-hour student hackathon empowering young engineers to architect the digital systems of tomorrow.
+          </p>
+
+          <div class="footer-socials">
+            <a href="https://instagram.com/zayacodehub" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com/company/zayacodehub" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="mailto:zayacodehub@gmail.com" class="social-icon-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About ZAYATHON</a></li>
+            <li><a href="#tracks" class="footer-link">10 Tracks</a></li>
+            <li><a href="#timeline" class="footer-link">Timeline & Schedule</a></li>
+            <li><a href="#prizes" class="footer-link">Prizes & Internships</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Tracks Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Featured Tracks</h4>
+          <ul class="footer-links">
+            <li><a href="#tracks" class="footer-link">AI & Agentic Systems</a></li>
+            <li><a href="#tracks" class="footer-link">Web3 & Blockchain</a></li>
+            <li><a href="#tracks" class="footer-link">FinTech & Payments</a></li>
+            <li><a href="#tracks" class="footer-link">IoT & Smart Cities</a></li>
+            <li><a href="#tracks" class="footer-link">Cybersecurity</a></li>
+            <li><a href="#tracks" class="footer-link">Open Innovation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Venue -->
+        <div>
+          <h4 class="footer-col-title">Organizer & Contact</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span><strong>Email:</strong> zayacodehub@gmail.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span><strong>Phone:</strong> +91 70333 99183</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><strong>Host Venue:</strong> Sona College of Technology, Salem, Tamil Nadu, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ZAYA CODE HUB. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem; align-items:center;">
+          <a href="#" style="color:var(--text-muted);">Privacy Policy</a>
+          <a href="#" style="color:var(--text-muted);">Terms & Code of Conduct</a>
+          <a href="admin/login.html" style="color:var(--primary); font-weight:600; display:inline-flex; align-items:center; gap:0.25rem;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Organizer Admin Portal ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- ======================================================================
+       13. INTERACTIVE MODALS
+       ====================================================================== -->
+
+  <!-- Modal 0: Student Login & Pass Retrieval -->
+  <div class="modal-backdrop" id="student-login-modal" role="dialog" aria-modal="true" aria-labelledby="student-login-title">
+    <div class="modal-dialog" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="student-login-title">🎓 Participant Login & Pass Retrieval</h3>
+        <button type="button" class="modal-close-btn" id="close-student-login-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.25rem; line-height:1.5;">
+          Enter your <strong>Team Registration ID</strong> (e.g. <code>ZAYA-748912</code>) or registered <strong>Team Leader Email</strong> to log in, view your admit card, and track your hackathon status.
+        </p>
+
+        <form id="student-login-form" style="display:flex; flex-direction:column; gap:1.1rem;">
+          <div class="form-group">
+            <label class="form-label" for="login-reg-query">Registration ID or Team Leader Email *</label>
+            <input type="text" id="login-reg-query" class="form-input" placeholder="e.g. ZAYA-748912 or aarav.sharma@sonatech.ac.in" required autofocus />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            <span>Login & Open Pass</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal A: Team Registration 3-Step Wizard -->
+  <div class="modal-backdrop" id="registration-modal" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="reg-modal-title">🚀 Register for ZAYATHON 2026</h3>
+        <button type="button" class="modal-close-btn" id="close-reg-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Wizard Step Indicators -->
+        <div class="wizard-steps">
+          <div class="step-indicator active" id="step-ind-1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Team Info</span>
+          </div>
+          <div class="step-indicator" id="step-ind-2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Members</span>
+          </div>
+          <div class="step-indicator" id="step-ind-3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Project Track</span>
+          </div>
+        </div>
+
+        <form id="registration-form">
+          <!-- Step 1: Team & College -->
+          <div class="wizard-step-content active" id="step-content-1">
+            <div class="form-group">
+              <label class="form-label" for="reg-team-name">Team Name *</label>
+              <input type="text" id="reg-team-name" class="form-input" placeholder="e.g. CyberVanguard" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-college">College / University Name *</label>
+              <input type="text" id="reg-college" class="form-input" placeholder="e.g. Sona College of Technology, Salem" required />
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="reg-team-size">Team Size (Members) *</label>
+                <select id="reg-team-size" class="form-select">
+                  <option value="2">2 Members</option>
+                  <option value="3">3 Members</option>
+                  <option value="4" selected>4 Members (Recommended)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reg-mode">Participation Mode *</label>
+                <select id="reg-mode" class="form-select">
+                  <option value="in-person">In-Person (Sona College Campus)</option>
+                  <option value="online">Online / Hybrid Remote</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Leader & Teammates -->
+          <div class="wizard-step-content" id="step-content-2">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="reg-leader-name">Team Leader Full Name *</label>
+                <input type="text" id="reg-leader-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reg-leader-year">Year of Study *</label>
+                <select id="reg-leader-year" class="form-select">
+                  <option value="1st Year">1st Year (Fresher)</option>
+                  <option value="2nd Year" selected>2nd Year</option>
+                  <option value="3rd Year">3rd Year</option>
+                  <option value="Other">Other Undergraduate</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="reg-leader-email">Leader Email Address *</label>
+                <input type="email" id="reg-leader-email" class="form-input" placeholder="e.g. leader@college.edu" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="reg-leader-phone">Leader Phone / WhatsApp *</label>
+                <input type="tel" id="reg-leader-phone" class="form-input" placeholder="e.g. +91 9876543210" required />
+              </div>
+            </div>
+
+            <!-- Dynamic Member List -->
+            <div id="dynamic-members-container">
+              <div class="form-group">
+                <label class="form-label">Member 2 Full Name & Role</label>
+                <input type="text" class="form-input" placeholder="e.g. Ananya Patel (Backend / Cloud)" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Member 3 Full Name & Role</label>
+                <input type="text" class="form-input" placeholder="e.g. Vikramaditya (AI / ML Engineer)" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Member 4 Full Name & Role</label>
+                <input type="text" class="form-input" placeholder="e.g. Sneha Reddy (UI/UX & Frontend)" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Track & Project Idea -->
+          <div class="wizard-step-content" id="step-content-3">
+            <div class="form-group">
+              <label class="form-label" for="reg-track">Select Preferred Track *</label>
+              <select id="reg-track" class="form-select" required>
+                <option value="Artificial Intelligence & Agentic AI">Track 01: Artificial Intelligence & Agentic AI</option>
+                <option value="Web3 & Blockchain">Track 02: Web3 & Blockchain</option>
+                <option value="FinTech & Digital Economy">Track 03: FinTech & Digital Economy</option>
+                <option value="IoT & Smart Cities">Track 04: IoT & Smart Cities</option>
+                <option value="Cybersecurity & Threat Intelligence">Track 05: Cybersecurity & Threat Intelligence</option>
+                <option value="HealthTech & Bio-Informatics">Track 06: HealthTech & Bio-Informatics</option>
+                <option value="Robotics & Autonomous Systems">Track 07: Robotics & Autonomous Systems</option>
+                <option value="Agritech & Rural Innovation">Track 08: Agritech & Rural Innovation</option>
+                <option value="Transportation & Logistics">Track 09: Transportation & Logistics</option>
+                <option value="Open Innovation & Moonshots">Track 10: Open Innovation & Moonshots</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-project-title">Working Project Title *</label>
+              <input type="text" id="reg-project-title" class="form-input" placeholder="e.g. MedAssist AI: Real-time Edge Diagnostic Suite" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-idea-summary">Brief Idea Abstract / Problem Statement</label>
+              <textarea id="reg-idea-summary" class="form-textarea" rows="3" placeholder="Briefly explain what problem you aim to solve and your proposed technology solution..."></textarea>
+            </div>
+          </div>
+
+          <!-- Wizard Footer Controls -->
+          <div class="modal-footer" style="padding-left: 0; padding-right: 0; margin-top: 1.5rem;">
+            <button type="button" class="btn btn-secondary btn-sm" id="wizard-prev-btn" style="display: none;">
+              <span>← Back</span>
+            </button>
+            <div style="display:flex; gap:0.75rem; margin-left:auto;">
+              <button type="button" class="btn btn-primary btn-sm" id="wizard-next-btn">
+                <span>Continue →</span>
+              </button>
+              <button type="submit" class="btn btn-primary btn-sm" id="wizard-submit-btn" style="display: none;">
+                <span>Confirm Registration 🚀</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal B: Dynamic Hackathon Ticket / Pass Generator -->
+  <div class="modal-backdrop" id="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title">
+    <div class="modal-dialog" style="max-width: 540px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="ticket-modal-title">🎟️ Official ZAYATHON Pass</h3>
+        <button type="button" class="modal-close-btn" id="close-ticket-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="ticket-container">
+          <div class="ticket-header">
+            <div>
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--primary); letter-spacing:0.1em; text-transform:uppercase;">OFFICIAL ADMIT PASS</span>
+              <h3 style="font-size:1.4rem; color:#ffffff;">ZAYATHON 2026</h3>
+            </div>
+            <span style="padding:0.25rem 0.65rem; border-radius:999px; background:rgba(0,255,136,0.15); border:1px solid #00ff88; color:#00ff88; font-family:var(--font-mono); font-size:0.75rem; font-weight:700;">VERIFIED</span>
+          </div>
+
+          <div class="ticket-details-grid">
+            <div class="ticket-info-item">
+              <span class="ticket-label">Registration Code</span>
+              <span class="ticket-val" id="ticket-team-id" style="color:var(--primary);">ZAYA-2026-9821</span>
+            </div>
+            <div class="ticket-info-item">
+              <span class="ticket-label">Team Name</span>
+              <span class="ticket-val" id="ticket-team-name">CyberVanguard</span>
+            </div>
+            <div class="ticket-info-item">
+              <span class="ticket-label">Team Leader</span>
+              <span class="ticket-val" id="ticket-leader">Rahul Sharma</span>
+            </div>
+            <div class="ticket-info-item">
+              <span class="ticket-label">Team Size</span>
+              <span class="ticket-val" id="ticket-size">4 Members</span>
+            </div>
+            <div class="ticket-info-item" style="grid-column: span 2;">
+              <span class="ticket-label">College / University</span>
+              <span class="ticket-val" id="ticket-college">Sona College of Technology, Salem</span>
+            </div>
+            <div class="ticket-info-item" style="grid-column: span 2;">
+              <span class="ticket-label">Allocated Track</span>
+              <span class="ticket-val" id="ticket-track" style="color:#ffb800;">Artificial Intelligence & Agentic AI</span>
+            </div>
+          </div>
+
+          <div class="ticket-qr-mock">
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">
+              HOST: Sona College of Tech, Salem<br />
+              ORG: ZAYA CODE HUB
+            </div>
+            <!-- Mock SVG QR Pattern -->
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="1.8">
+              <rect x="3" y="3" width="6" height="6" rx="1"/>
+              <rect x="15" y="3" width="6" height="6" rx="1"/>
+              <rect x="3" y="15" width="6" height="6" rx="1"/>
+              <path d="M15 15h3v3h-3zM21 15v6M15 21h6"/>
+            </svg>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; margin-top:1.5rem;">
+          <button type="button" class="btn btn-primary" id="btn-print-ticket" style="flex:1;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print / Save Pass</span>
+          </button>
+          <button type="button" class="btn btn-secondary" id="btn-go-home" style="flex:1;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Go to Home Page</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal C: Track Deep-Dive Details Modal -->
+  <div class="modal-backdrop" id="track-modal" role="dialog" aria-modal="true" aria-labelledby="modal-track-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="modal-track-num" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--primary); font-weight:700;">TRACK 01</span>
+          <h3 class="modal-title" id="modal-track-title">Track Name</h3>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeTrackModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modal-track-desc" style="color:#cbd5e1; font-size:1.05rem; margin-bottom:1.5rem;"></p>
+
+        <h4 style="font-size:1.1rem; color:#ffffff; margin-bottom:0.75rem;">💡 Sample Problem Statements</h4>
+        <ul id="modal-track-problems" style="list-style:none; padding-left:0; margin-bottom:1.5rem;"></ul>
+
+        <h4 style="font-size:1.1rem; color:#ffffff; margin-bottom:0.75rem;">🛠️ Recommended Toolkits & Frameworks</h4>
+        <div id="modal-track-tech" style="margin-bottom:1.5rem;"></div>
+
+        <h4 style="font-size:1.1rem; color:#ffffff; margin-bottom:0.75rem;">⚖️ Jury Evaluation Pointers</h4>
+        <p id="modal-track-criteria" style="font-size:0.92rem; color:var(--text-secondary); background:rgba(255,255,255,0.04); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border-subtle);"></p>
+
+        <div style="margin-top:2rem; display:flex; justify-content:flex-end;">
+          <button type="button" class="btn btn-primary btn-sm open-registration-btn" onclick="closeTrackModal(); openRegistrationModal();">
+            <span>Choose This Track & Register →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Three.js 3D Engine & Interactive Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/tracks.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

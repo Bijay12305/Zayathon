@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=dashboard.html" />
+  <title>ZAYATHON Admin Redirect</title>
+</head>
+<body>
+  <script>
+    if (sessionStorage.getItem('zayathon_admin_session') === 'active') {
+      window.location.href = 'dashboard.html' + window.location.hash;
+    } else {
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

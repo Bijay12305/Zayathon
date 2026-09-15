@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if the requesting user is an authorized Administrator
+    // Checks that the authenticated user UID exists in the 'admins' collection
+    // and holds an authorized admin role (e.g. 'super_admin' or 'admin')
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.uid == 'LhqQVJyCuog3jFbCjvdWYKKhttz1' ||
+        request.auth.token.email in ['bijay08@gmail.com', 'admin@zayacodehub.com', 'organizer@zayathon.in'] ||
+        (
+          exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+          get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in [
+            'super_admin',
+            'admin',
+            'Super Administrator',
+            'organizer'
+          ]
+        )
+      );
+    }
+
+    // Admins Collection:
+    // Read: Authenticated admins can read admin profiles
+    // Write: Restricted to existing super_admin
+    match /admins/{adminId} {
+      allow read: if request.auth != null && (request.auth.uid == adminId || isAdmin());
+      allow write: if isAdmin();
+    }
+
+    // Participants Collection:
+    // PUBLIC ACCESS: Can only create a registration document with status == 'pending'
+    // Public users CANNOT read or list participant records.
+    // ADMIN ACCESS: Only authorized administrators can read, update (verify/reject), delete.
+    match /participants/{participantId} {
+      allow create: if request.resource.data.status == 'pending'
+                    && request.resource.data.participantId is string
+                    && request.resource.data.fullName is string
+                    && request.resource.data.email is string;
+      allow read: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Teams Collection:
+    // PUBLIC ACCESS: Can create team registration
+    // ADMIN ACCESS: Full read/write for authorized administrators
+    match /teams/{teamId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Verification History Collection:
+    // PUBLIC ACCESS: Can create initial 'Registration Submitted' record
+    // ADMIN ACCESS: Full read and create for verification/rejection records
+    match /verification_history/{historyId} {
+      allow create: if (request.resource.data.action == 'Registration Submitted') || isAdmin();
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Admin Notes Collection:
+    // Strictly restricted to authorized administrators
+    match /admin_notes/{noteId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

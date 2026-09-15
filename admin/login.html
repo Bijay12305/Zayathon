@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyan">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | ZAYATHON 2026 - ZAYA CODE HUB</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/admin-suite.css" />
+
+  <style>
+    .login-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 240, 255, 0.08) 0%, var(--admin-bg) 70%);
+      position: relative;
+    }
+    .login-box {
+      width: 100%;
+      max-width: 440px;
+      background: var(--admin-card);
+      border: 1px solid var(--admin-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2.25rem;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .login-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      margin-bottom: 1.25rem;
+    }
+    .password-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .toggle-pass-btn {
+      position: absolute;
+      right: 12px;
+      background: transparent;
+      border: none;
+      color: var(--admin-text-muted);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      padding: 4px;
+    }
+    .toggle-pass-btn:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-wrapper">
+    <!-- Top Right Day / Dark Toggle -->
+    <div style="position: absolute; top: 20px; right: 20px; display: flex; gap: 0.75rem; align-items: center;">
+      <a href="../index.html" class="btn btn-secondary btn-sm" style="font-size: 0.8rem;">
+        <span>← Public Site</span>
+      </a>
+      <button type="button" class="mode-toggle-btn" id="admin-theme-toggle" aria-label="Toggle Day / Dark Mode" title="Toggle Day / Dark Mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+      </button>
+    </div>
+
+    <div class="login-box">
+      <div class="login-header">
+        <a href="../index.html" class="login-brand">
+          <div class="brand-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="brand-text" style="text-align: left;">
+            <span class="brand-name">ZAYA<span>THON</span></span>
+            <span class="brand-sub">BY ZAYA CODE HUB</span>
+          </div>
+        </a>
+        <h1 style="font-size: 1.45rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 0.35rem;">
+          Administrator Portal
+        </h1>
+        <p style="font-size: 0.88rem; color: var(--admin-text-sub);">
+          Sign in to review participant applications and manage verification.
+        </p>
+      </div>
+
+      <!-- Error Alert Box -->
+      <div id="login-error-alert" style="display: none; padding: 0.75rem 1rem; border-radius: 6px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); color: #ef4444; font-size: 0.85rem; margin-bottom: 1.25rem;">
+      </div>
+
+      <form id="admin-login-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem;">
+          <label class="form-label" for="admin-email" style="font-size:0.84rem; font-weight:600;">Admin Email or Organizer ID *</label>
+          <input type="text" id="admin-email" class="form-input" placeholder="e.g. admin@zayacodehub.com" required autofocus />
+        </div>
+
+        <div class="form-group" style="display:flex; flex-direction:column; gap:0.4rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="form-label" for="admin-password" style="font-size:0.84rem; font-weight:600;">Password *</label>
+            <a href="javascript:void(0)" onclick="alert('Please contact the Lead Organizer at zayacodehub@gmail.com / +91 70333 99183 for security key reset.')" style="font-size: 0.76rem; color: var(--primary); text-decoration: none;">Forgot password?</a>
+          </div>
+          <div class="password-input-wrap">
+            <input type="password" id="admin-password" class="form-input" style="width: 100%; padding-right: 60px;" placeholder="••••••••••••" required />
+            <button type="button" class="toggle-pass-btn" id="toggle-password-btn">Show</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 0.95rem; margin-top: 0.5rem;">
+          <span>Authorize & Enter Dashboard</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/admin-core.js"></script>
+</body>
+</html>
